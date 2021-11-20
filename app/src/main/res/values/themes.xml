@@ -12,5 +12,17 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+
+        <item name="android:textViewStyle">@style/Theme.SuperEmbroiderer.TextView</item>
+        <item name="buttonStyle">@style/Theme.SuperEmbroiderer.Button </item>
     </style>
+    <style name="Theme.SuperEmbroiderer.TextView" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor"> @color/blue_500</item>
+    </style>
+
+    <style name="Theme.SuperEmbroiderer.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/orange_200</item>
+    </style>
+
 </resources>

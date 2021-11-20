@@ -3,4 +3,8 @@
     <string name="hello">Hello</string>
     <string name="your_name">Your name</string>
     <string name="start">Start</string>
+    <string name="embroiderer">Embroiderer</string>
+    <string name="beginner">Beginner</string>
+    <string name="promising">Promising</string>
+    <string name="unstoppable">Unstoppable</string>
 </resources>

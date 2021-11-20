@@ -4,4 +4,8 @@
     <string name="hello">Привет</string>
     <string name="your_name">Ваше имя</string>
     <string name="start">Начать</string>
+    <string name="embroiderer">Вышивальщица</string>
+    <string name="beginner">Начинающий</string>
+    <string name="promising">Перспекивный</string>
+    <string name="unstoppable">Неудержимый</string>
 </resources>
