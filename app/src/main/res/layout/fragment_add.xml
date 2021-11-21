@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".AddFragment"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    tools:context=".AddFragment">
 
     <ImageView
         android:id="@+id/icon_level"
-        android:layout_marginTop="20dp"
         android:layout_width="200dp"
         android:layout_height="200dp"
+        android:layout_marginTop="20dp"
         android:contentDescription="@string/todo"
         android:src="@mipmap/ic_launcher_logo"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,10 +38,31 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:imeOptions="actionDone"
-            android:inputType="text"
+            android:inputType="number"
             android:maxLines="2" />
 
     </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/total_number"
+        app:layout_constraintBottom_toTopOf="@id/save_button"
+        android:layout_marginBottom="70dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_input_layout" />
+
+    <TextView
+        android:id="@+id/text_result_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start_counter"
+        app:layout_constraintBottom_toTopOf="@id/save_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_view" />
 
     <Button
         android:id="@+id/save_button"
@@ -51,6 +72,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_input_layout" />
+        app:layout_constraintTop_toBottomOf="@id/text_result_view" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
