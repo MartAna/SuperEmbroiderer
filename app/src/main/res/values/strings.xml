@@ -7,4 +7,13 @@
     <string name="beginner">Beginner</string>
     <string name="promising">Promising</string>
     <string name="unstoppable">Unstoppable</string>
+    <string name="open">Open</string>
+    <string name="enter_the_number">Enter the number of cross stitch</string>
+    <string name="level">Level</string>
+    <string name="add">Add</string>
+    <string name="info">Info</string>
+    <string name="save">Save</string>
+    <string name="todo">TODO</string>
+    <string name="the_creator">The creator of the idea: Любовь Воденикова</string>
+    <string name="the_creator_of_the_application">The creator of the application: Анастасия Мартынкевич</string>
 </resources>

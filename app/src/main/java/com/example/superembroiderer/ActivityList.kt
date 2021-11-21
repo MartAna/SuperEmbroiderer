@@ -1,33 +1,61 @@
 package com.example.superembroiderer
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.bottomnavigation.BottomNavigationView
+
+private const val LAST_SELECTED_ITEM = "LAST_SELECTED_ITEM"
 
 class ActivityList : AppCompatActivity() {
+
+    private lateinit var bottomNavigationMenu: BottomNavigationView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list)
 
-        val levelList: List<Level> = listOf(
-            Level(R.drawable.beginner, "Beginner", 5000),
-            Level(R.drawable.promising,"Promising" , 12000),
-            Level(R.drawable.unstoppable,"Unstoppable" , 17000),
+        bottomNavigationMenu = findViewById(R.id.bottom_menu)
 
-        )
+        bottomNavigationMenu.setOnItemSelectedListener { item ->
 
-        val usersRecyclerView: RecyclerView = findViewById(R.id.level_recycler_view)
-        usersRecyclerView.layoutManager =
-            LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-        usersRecyclerView.addItemDecoration(
-            DividerItemDecoration(
-                this,
-                DividerItemDecoration.VERTICAL
-            )
-        )
+            var fragment: Fragment? = null
+            when (item.itemId) {
+                R.id.level -> {
+                    fragment = LevelFragment()
 
-        usersRecyclerView.adapter = LevelAdapter(levelList)
+                }
+                R.id.add -> {
+                    fragment = AddFragment()
+                }
+                R.id.info -> {
+                    fragment = InfoFragment()
+                }
+            }
+            replaceFragment(fragment!!)
+            true
+        }
+        bottomNavigationMenu.selectedItemId =
+            savedInstanceState?.getInt(LAST_SELECTED_ITEM) ?: R.id.level
+
+
+
+
+    }
+    override fun onSaveInstanceState(outState: Bundle) {
+        outState.putInt(LAST_SELECTED_ITEM, bottomNavigationMenu.selectedItemId)
+        super.onSaveInstanceState(outState)
+    }
+
+    private fun replaceFragment(fragment: Fragment) {
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.fragment_container,fragment)
+            .addToBackStack(null)
+            .commit()
+
     }
 }

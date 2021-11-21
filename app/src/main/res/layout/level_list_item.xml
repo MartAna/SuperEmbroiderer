@@ -5,7 +5,8 @@
     android:layout_height="wrap_content"
     android:layout_marginStart="16dp"
     android:layout_marginTop="16dp"
-    android:layout_marginEnd="16dp">
+    android:layout_marginEnd="16dp"
+    app:cardCornerRadius="50dp">
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -25,23 +26,25 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:layout_toEndOf="@+id/image_view" />
+            android:layout_toEndOf="@+id/image_view"
+            android:scaleType="centerCrop" />
 
         <TextView
             android:id="@+id/purpose_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/level_view"
             android:layout_alignParentEnd="true"
             android:layout_toEndOf="@+id/image_view"
-            android:layout_below="@id/level_view" />
+            android:scaleType="centerCrop" />
 
         <ProgressBar
             android:id="@+id/progress_horizontal"
             style="@android:style/Widget.ProgressBar.Horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:progress="0"
-            android:layout_below="@id/image_view" />
+            android:layout_below="@id/image_view"
+            android:progress="0" />
 
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

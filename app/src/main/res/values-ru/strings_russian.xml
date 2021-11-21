@@ -8,4 +8,13 @@
     <string name="beginner">Начинающий</string>
     <string name="promising">Перспекивный</string>
     <string name="unstoppable">Неудержимый</string>
+    <string name="open">Открыть</string>
+    <string name="enter_the_number">Введите количество крестиков</string>
+    <string name="level">Уровни</string>
+    <string name="add">Добавить</string>
+    <string name="info">Информация</string>
+    <string name="save">Сохранить</string>
+    <string name="todo">TODO</string>
+    <string name="the_creator">Создатель идеи: Любовь Воденикова</string>
+    <string name="the_creator_of_the_application">Создатель приложения: Анастасия Мартынкевич</string>
 </resources>
